@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
   <artifactId>parent</artifactId>
-  <version>20220608.2-SNAPSHOT</version>
+  <version>20220608.1.touch</version>
 
   <packaging>pom</packaging>
 
@@ -27,15 +27,24 @@ application while protecting against XSS.
     <url>https://github.com/OWASP/java-html-sanitizer</url>
   </scm>
 
+  <!-- Distribuição -->
   <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
+    <downloadUrl>
+      https://nexus3.touchtec.com.br/repository/maven-releases/
+    </downloadUrl>
     <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>touch-releases-nexus3</id>
+      <name>Touch Releases Repository Nexus 3</name>
+      <url>https://nexus3.touchtec.com.br/repository/maven-releases/
+      </url>
     </repository>
+    <snapshotRepository>
+      <id>touch-snapshots-nexus3</id>
+      <name>Touch Snapshots Repository Nexus 3</name>
+      <url>https://nexus3.touchtec.com.br/repository/maven-snapshots/
+      </url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
   </distributionManagement>
 
   <issueManagement>
